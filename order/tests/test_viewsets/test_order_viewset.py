@@ -1,13 +1,14 @@
 import json
 
-from django.urls import reverse
 from rest_framework import status
 from rest_framework.test import APIClient, APITestCase
 
-from order.factories import OrderFactory, UserFactory
-from order.models import Order
+from django.urls import reverse
+
 from product.factories import CategoryFactory, ProductFactory
+from order.factories import OrderFactory, UserFactory
 from product.models import Product
+from order.models import Order
 
 
 class TestOrderViewSet(APITestCase):
@@ -34,7 +35,8 @@ class TestOrderViewSet(APITestCase):
             order_data["results"][0]["product"][0]["price"], self.product.price
         )
         self.assertEqual(
-            order_data["results"][0]["product"][0]["active"], self.product.active
+            order_data["results"][0]["product"][0]["active"],
+            self.product.active,
         )
         self.assertEqual(
             order_data["results"][0]["product"][0]["category"][0]["title"],
@@ -44,7 +46,10 @@ class TestOrderViewSet(APITestCase):
     def test_create_order(self):
         user = UserFactory()
         product = ProductFactory()
-        data = json.dumps({"products_id": [product.id], "user": user.id})
+        data = json.dumps({
+            "products_id": [product.id],
+            "user": user.id
+        })
 
         response = self.client.post(
             reverse("order-list", kwargs={"version": "v1"}),
