@@ -15,6 +15,7 @@ class UserFactory(factory.django.DjangoModelFactory):
 
 class OrderFactory(factory.django.DjangoModelFactory):
     user = factory.SubFactory(UserFactory)
+    product = factory.LazyAttribute(ProductFactory)  # IMPORTANTE Adicionado por mim fora do curso, talvez erro deles.
 
     @factory.post_generation
     def product(self, create, extracted, **kwargs):
