@@ -41,6 +41,7 @@ RUN apt-get update \
 # install poetry - respects $POETRY_VERSION & $POETRY_HOME
 RUN curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python
 
+# isntall libpq-dev gcc && psycopg2 (requirements to PostgreSQL)
 RUN apt-get update \
     && apt-get -y install libpq-dev gcc \
     && pip install psycopg2
