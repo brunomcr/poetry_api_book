@@ -29,9 +29,7 @@ DEBUG = True
 # Env.Dev
 DEBUG = int(os.environ.get("DEBUG", default=0))
 
-ALLOWED_HOSTS = []
-# Env.Dev
-ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS").split(" ")
+ALLOWED_HOSTS = [os.environ.get("DJANGO_ALLOWED_HOSTS")]
 
 
 # Application definition
