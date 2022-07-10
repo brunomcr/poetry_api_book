@@ -20,6 +20,10 @@ A project started with Poetry and developed with Django Rest Framework
 
 
 ### Quick Start
+#### Poetry
+* `poetry install` 
+* `poetry run manage.py migrate`
+* `poetry run manage.py runserver` 
 #### Docker Compose
 * `docker-compose up -d --build` 
 * `docker-compose exec web python manage.py migrate`
