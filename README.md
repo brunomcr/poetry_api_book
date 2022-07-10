@@ -9,10 +9,19 @@ A project started with Poetry and developed with Django Rest Framework
 * python 
 * pytest 
 * factory-boy 
-* Django = "
+* Django 
 * djangorestframework
-* Faker =
-* pytest-django =
+* Faker
+* pytest-django
 * django-extensions 
+* .env
 * docker
 * docker-compose
+
+
+### Quick Start
+#### Docker Compose
+`docker-compose up -d --build` 
+`docker-compose exec web python manage.py migrate`
+#### Test
+`docker-compose exec web python manage.py test`
