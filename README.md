@@ -21,7 +21,7 @@ A project started with Poetry and developed with Django Rest Framework
 
 ### Quick Start
 #### Docker Compose
-`docker-compose up -d --build` 
-`docker-compose exec web python manage.py migrate`
+* `docker-compose up -d --build` 
+* `docker-compose exec web python manage.py migrate`
 #### Test
-`docker-compose exec web python manage.py test`
+* `docker-compose exec web python manage.py test`
