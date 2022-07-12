@@ -11,7 +11,7 @@ tests = ["pytest", "pytest-asyncio", "mypy (>=0.800)"]
 
 [[package]]
 name = "atomicwrites"
-version = "1.4.0"
+version = "1.4.1"
 description = "Atomic file writes."
 category = "main"
 optional = false
@@ -70,14 +70,14 @@ sqlparse = ">=0.2.0"
 
 [[package]]
 name = "django-extensions"
-version = "3.1.5"
+version = "3.2.0"
 description = "Extensions for Django"
 category = "main"
 optional = false
 python-versions = ">=3.6"
 
 [package.dependencies]
-Django = ">=2.2"
+Django = ">=3.2"
 
 [[package]]
 name = "djangorestframework"
@@ -108,7 +108,7 @@ doc = ["sphinx", "sphinx-rtd-theme", "sphinxcontrib-spelling"]
 
 [[package]]
 name = "faker"
-version = "13.14.0"
+version = "13.15.0"
 description = "Faker is a Python package that generates fake data for you."
 category = "main"
 optional = false
@@ -273,8 +273,7 @@ asgiref = [
     {file = "asgiref-3.5.2.tar.gz", hash = "sha256:4a29362a6acebe09bf1d6640db38c1dc3d9217c68e6f9f6204d72667fc19a424"},
 ]
 atomicwrites = [
-    {file = "atomicwrites-1.4.0-py2.py3-none-any.whl", hash = "sha256:6d1784dea7c0c8d4a5172b6c620f40b6e4cbfdf96d783691f2e1302a7b88e197"},
-    {file = "atomicwrites-1.4.0.tar.gz", hash = "sha256:ae70396ad1a434f9c7046fd2dd196fc04b12f9e91ffb859164193be8b6168a7a"},
+    {file = "atomicwrites-1.4.1.tar.gz", hash = "sha256:81b2c9071a49367a7f770170e5eec8cb66567cfbbc8c73d20ce5ca4a8d71cf11"},
 ]
 attrs = [
     {file = "attrs-21.4.0-py2.py3-none-any.whl", hash = "sha256:2d27e3784d7a565d36ab851fe94887c5eccd6a463168875832a1be79c82828b4"},
@@ -293,8 +292,8 @@ django-debug-toolbar = [
     {file = "django_debug_toolbar-3.5.0-py3-none-any.whl", hash = "sha256:89a52128309eb4da12738801ff0c202d2ff8730d1c3225fac6acf630c303e661"},
 ]
 django-extensions = [
-    {file = "django-extensions-3.1.5.tar.gz", hash = "sha256:28e1e1bf49f0e00307ba574d645b0af3564c981a6dfc87209d48cb98f77d0b1a"},
-    {file = "django_extensions-3.1.5-py3-none-any.whl", hash = "sha256:9238b9e016bb0009d621e05cf56ea8ce5cce9b32e91ad2026996a7377ca28069"},
+    {file = "django-extensions-3.2.0.tar.gz", hash = "sha256:7dc7cd1da50d83b76447a58f5d7e5c8e6cd83f21e9b7e5f97e6b644f4d4e21a6"},
+    {file = "django_extensions-3.2.0-py3-none-any.whl", hash = "sha256:4c234a7236e9e41c17d9036f6dae7a3a9b212527105b8a0d24b2459b267825f0"},
 ]
 djangorestframework = [
     {file = "djangorestframework-3.13.1-py3-none-any.whl", hash = "sha256:24c4bf58ed7e85d1fe4ba250ab2da926d263cd57d64b03e8dcef0ac683f8b1aa"},
@@ -305,8 +304,8 @@ factory-boy = [
     {file = "factory_boy-3.2.1.tar.gz", hash = "sha256:a98d277b0c047c75eb6e4ab8508a7f81fb03d2cb21986f627913546ef7a2a55e"},
 ]
 faker = [
-    {file = "Faker-13.14.0-py3-none-any.whl", hash = "sha256:0297b7fc0f2458dfff8d5a92335c62fa25fb059f8cbaf7db580a0dd7177aff2e"},
-    {file = "Faker-13.14.0.tar.gz", hash = "sha256:b9f93ec97a70da79d43f497aa7b2b7d2bcd5d0c6d3ab7c102dde4193d0a38351"},
+    {file = "Faker-13.15.0-py3-none-any.whl", hash = "sha256:8e94a749d2f3d9b367f61eb33be6a534f0a2d305c54e912ee6618370e3278db7"},
+    {file = "Faker-13.15.0.tar.gz", hash = "sha256:a126fa66f54e65a67f913dcc698c9d023def7277882536bde2968fcac701bfd5"},
 ]
 iniconfig = [
     {file = "iniconfig-1.1.1-py2.py3-none-any.whl", hash = "sha256:011e24c64b7f47f6ebd835bb12a743f2fbe9a26d4cecaa7f53bc4f35ee9da8b3"},
