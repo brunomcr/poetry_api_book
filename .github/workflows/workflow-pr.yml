@@ -27,7 +27,7 @@ jobs:
         run: python -m poetry install
 
       - name: Migrations
-        run: | 
+        run: |
           poetry run python manage.py migrate
           poetry run python manage.py makemigrations
           poetry run python manage.py migrate
