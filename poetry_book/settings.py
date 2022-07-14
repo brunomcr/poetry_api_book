@@ -27,7 +27,7 @@ DEBUG = str(os.environ.get("DEBUG"))
 
 ALLOWED_HOSTS = []
 if not DEBUG:
-    ALLOWED_HOSTS += [os.environ.get("ALLOWED_HOSTS"), "poetry-book.herokuapp.com"]
+    ALLOWED_HOSTS += [os.environ.get("ALLOWED_HOSTS", 'poetry-book.herokuapp.com')]
 
 
 # Application definition
