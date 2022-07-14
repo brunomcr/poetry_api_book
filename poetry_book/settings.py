@@ -26,6 +26,8 @@ SECRET_KEY = os.environ.get("SECRET_KEY", "django-insecure-%sqtdah-1^@y8nalxxhav
 DEBUG = str(os.environ.get("DEBUG"))
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'poetry-book.herokuapp.com']
+if not DEBUG:
+    ALLOWED_HOSTS += [os.environ.get("ALLOWED_HOSTS")]
 
 
 # Application definition
