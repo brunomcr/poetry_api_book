@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get("SECRET_KEY", "django-insecure-%sqtdah-1^@y8nalxxhavmgt@f@i_2yk3%o7(_1n%30duwjrp9")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = str(os.environ.get("DEBUG", default=0))
+DEBUG = os.environ.get("DEBUG", default=False)
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'poetry-book.herokuapp.com']
 if not DEBUG:
