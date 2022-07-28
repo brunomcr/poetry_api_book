@@ -1,5 +1,5 @@
 # poetry_book
-A project started with Poetry and developed with Django Rest Framework
+A project started with Poetry and developed with Django Rest Framework, Docker, CI / CD
 
 #### Tools
 * Poetry
