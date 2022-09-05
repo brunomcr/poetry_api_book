@@ -18,9 +18,12 @@ A project started with Poetry and developed with Django Rest Framework, Docker, 
 * docker
 * docker-compose
 
-#### Deploy to:
-* Heroku
-
+#### Deploy to Heroku with Docker:
+* Config:
+  * SECRET_KEY: `heroku config:set SECRET_KEY="<scretKey>" -a <herokuAppName>`
+    * **scretKey**, can be generate in: https://djecrety.ir/
+  * `heroku stack:set container -a <herokuAppName>`
+  * `heroku push heroku main:main`
 
 ### Quick Start
 #### Poetry
