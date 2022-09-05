@@ -17,6 +17,8 @@ A project started with Poetry and developed with Django Rest Framework, Docker, 
 * .env
 * docker
 * docker-compose
+
+#### Deploy to:
 * Heroku
 
 
