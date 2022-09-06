@@ -25,7 +25,7 @@ SECRET_KEY = os.environ.get(
 )
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get("DEBUG", default=True)
+DEBUG = os.environ.get("DEBUG", default=False)
 
 ALLOWED_HOSTS = ["localhost", "127.0.0.1", "poetry-api-book.herokuapp.com"]
 if not DEBUG:
