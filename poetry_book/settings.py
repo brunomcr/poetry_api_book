@@ -20,12 +20,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get("SECRET_KEY", "django-insecure-%sqtdah-1^@y8nalxxhavmgt@f@i_2yk3%o7(_1n%30duwjrp9")
+SECRET_KEY = os.environ.get(
+    "SECRET_KEY", "django-insecure-%sqtdah-1^@y8nalxxhavmgt@f@i_2yk3%o7(_1n%30duwjrp9"
+)
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get("DEBUG", default=True)
+DEBUG = os.environ.get("DEBUG", default=False)
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'poetry-api-book.herokuapp.com']
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", "poetry-api-book.herokuapp.com"]
 if not DEBUG:
     ALLOWED_HOSTS += [os.environ.get("ALLOWED_HOSTS")]
 
@@ -41,7 +43,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "django_extensions",
     "rest_framework",
-    'rest_framework.authtoken',
+    "rest_framework.authtoken",
     "order",
     "product",
     "debug_toolbar",
@@ -129,7 +131,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_ROOT = BASE_DIR / "staticfiles"
 
 STATIC_URL = "static/"
 
@@ -144,12 +146,12 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # REST Framework
 
 REST_FRAMEWORK = {
-    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 5,
-    'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework.authentication.BasicAuthentication',
-        'rest_framework.authentication.SessionAuthentication',
-        'rest_framework.authentication.TokenAuthentication',
+    "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
+    "PAGE_SIZE": 5,
+    "DEFAULT_AUTHENTICATION_CLASSES": [
+        "rest_framework.authentication.BasicAuthentication",
+        "rest_framework.authentication.SessionAuthentication",
+        "rest_framework.authentication.TokenAuthentication",
     ],
 }
 
@@ -160,3 +162,6 @@ INTERNAL_IPS = [
     "127.0.0.1",
 ]
 
+# CSRF
+
+CSRF_TRUSTED_ORIGINS = ["https://poetry-api-book.herokuapp.com"]
