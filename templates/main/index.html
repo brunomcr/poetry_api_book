@@ -1,0 +1,61 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block title %} BMCR - Home {% endblock %}
+{% block content %}
+
+<div class="container my-5 ">
+    <!-- Documentation -->
+    <div class="row p-4 align-items-center">
+        <div class="col-6 p-3">
+
+            <h1 class="display-5 fw-bold lh-1 my-3">Interactive API</h1>
+            <p class="lead">
+                The list below directs you to all available endpoints and parameters for testing the <span class="fw-semibold">Poetry Book API</span>.
+                This interaction is only possible in <span class="fw-semibold text-danger">DEBUG</span> mode, for production it can be used from any API testing
+                tool.
+            </p>
+            <p class="fw-semibold text-danger">
+                By default, Primary Key {pk} = 1
+            </p>
+
+            <ul>
+                <!-- Category -->
+                <li class="list-group-item lead my-2">Category</li>
+                <ul class="list-group list-group-horizontal p-1">
+                    <li class="list-group-item list-group-item-primary">GET</li>
+                    <a href="/bookstore/v2/category/" class="list-group-item list-group-item-action">/bookstore/v2/category/</a>
+                </ul>
+                <ul class="list-group list-group-horizontal p-1">
+                    <li class="list-group-item list-group-item-primary">GET</li>
+                    <a href="/bookstore/v2/category/1/" class="list-group-item list-group-item-action">/bookstore/v2/category/{pk}/</a>
+                </ul>
+
+                <!-- Product -->
+                <li class="list-group-item lead my-2">Product</li>
+                <ul class="list-group list-group-horizontal p-1">
+                    <li class="list-group-item list-group-item-primary col">GET</li>
+                    <a href="/bookstore/v2/product/" class="list-group-item list-group-item-action">/bookstore/v2/product/</a>
+                </ul>
+                <ul class="list-group list-group-horizontal p-1">
+                    <li class="list-group-item list-group-item-primary col">GET</li>
+                    <a href="/bookstore/v2/product/1/" class="list-group-item list-group-item-action">/bookstore/v2/product/{pk}/</a>
+                </ul>
+
+                <!-- Order -->
+                <li class="list-group-item lead my-2">Order list</li>
+                <ul class="list-group list-group-horizontal p-1">
+                    <li class="list-group-item list-group-item-primary col">GET</li>
+                    <a href="/bookstore/v2/order/" class="list-group-item list-group-item-action text-wrap">/bookstore/v2/order/</a>
+                </ul>
+                <ul class="list-group list-group-horizontal p-1">
+                    <li class="list-group-item list-group-item-primary col">GET</li>
+                    <a href="/bookstore/v2/order/1/" class="list-group-item list-group-item-action">/bookstore/v2/order/{pk}/</a>
+                </ul>
+
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
