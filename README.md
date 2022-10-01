@@ -1,6 +1,7 @@
 # 📘 Poetry API Book
 An API developed with Django Rest Framework, from Backend Python course from EBAC.
 
+This project can be found at: https://poetry-api-book.herokuapp.com/
 
 ## 📑 Prerequisites
 
